@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+
+.scrollbar { position:relative; }
+
+	.scroll-box { position:relative; overflow:hidden; }
+
+		.scroll-box .container { position:relative; float:left; width:100%; }
+	
+			.scroll-box .scroll-content { clear:both; }
+
+		.scroller { float:right; width:10px; position:absolute; right:0; top:0; }
+
+			.scroller .base {
+				position:relative;
+				width:10px;
+				top:11px;
+				margin:0 0 10px 0;
+				background-color:#444;
+			}
+			
+			.dragger {
+				position:absolute;
+				width:8px;
+				height:100px;
+				cursor:pointer;
+				background-color:#666;
+				left:1px;
+			}
+			
+			.scrollUpBtn, .scrollDownBtn {
+				position:absolute;
+				width:10px;
+				height:10px;
+				right:0;
+				cursor:pointer;
+			}
+
+			.scrollUpBtn { top:0; background:transparent url(../images/scroll-btn-up.gif) 0 0 no-repeat; }
+			.scrollDownBtn { bottom:0; background:transparent url(../images/scroll-btn-down.gif) 0 0 no-repeat; }
+
+/* SCROLLBAR CUSTOM HEIGHT */
+.scrollbar.hgt460 .scroll-box, .scrollbar.hgt460 .scroller { height:460px; }
+.scrollbar.hgt460 .scroller { z-index:1; right:-10px; top:4px; }
+.scrollbar.hgt460 .scroller .base { height:438px; }
+
+.scrollbar.hgt430 .scroll-box, .scrollbar.hgt430 .scroller { height:430px; }
+.scrollbar.hgt430 .scroller .base { height:408px; }

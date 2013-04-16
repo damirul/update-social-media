@@ -1,0 +1,134 @@
+
+/* Start styling for live demo*/
+
+.live_demo_overlay{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:100;
+	background:black;
+	zoom: 1;
+	filter: alpha(opacity=77);
+	opacity: 0.77;
+}
+
+.live_demo_container{
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -82px;
+    margin-left: -300px;
+	text-align:center;
+    font-family: 'Open Sans', Arial,sans-serif;
+    padding: 4px 12px;
+    width: 600px;
+    z-index: 100000005 !important;
+	display:none;
+}
+
+h1.demo-title{
+	color:white;
+	font-size:30px;
+	font-weight:bold;
+}
+
+.demo-description{
+	margin-top: 15px;
+	color:white;
+	font-size:16px;
+}
+
+.demo-buttons {
+    padding: 12px 0px 5px;
+
+    margin-top: 15px;
+    height: 36px;
+    position: relative;
+    width: 100%;
+
+    text-align: center;
+}
+
+.demo-buttona {
+    border-radius: 2px 2px 2px 2px;
+    border-width: 1px;
+    border-style: solid;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-transform: lowercase;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Open Sans','lucida grande','lucida sans unicode','lucida sans',sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    height: 31px;
+    line-height: 31px;
+    background-color: rgb(137, 179, 81);
+    background-image: -moz-linear-gradient(center top , rgb(147, 189, 92), rgb(121, 164, 66));
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    padding: 0px 20px;
+}
+
+.demo-button {
+    border-radius: 2px 2px 2px 2px;
+    border: 1px solid #d2363a;
+    background-color: #d2363a;
+	text-align: center;
+    color: rgb(255, 255, 255);
+    text-transform: lowercase;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Open Sans','lucida grande','lucida sans unicode','lucida sans',sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+	padding: 5px 20px;
+}
+
+.demo-button:hover{
+	text-decoration:none;
+}
+
+.perks_list{
+	display:none;
+}
+
+.locked_perk_overlay{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:50;
+	background:black;
+	zoom:1;
+	filter: alpha(opacity=77);
+	opacity: 0.77;
+
+}
+
+#find_song_box {
+    width: 150spx;
+    height: 17px;
+    padding: 2px 18px 1px 22px;
+    background-image: none;
+    border-radius: 12px 12px 12px 12px;
+	border-style:solid;
+	border: 2px solid rgb(216, 218, 214);
+}
+
+
+
+
+/* end styling for live demo */

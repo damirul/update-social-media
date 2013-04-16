@@ -1,0 +1,1025 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml http://ogp.me/ns/fb#">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>TheRedtown | Party page demo</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+<link rel="stylesheet" type="text/css" href="css/scrollbar.css" />
+<link rel="stylesheet" type="text/css" href="css/live_demo.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+<script type="text/javascript" src="js/jslibrary.js"></script>
+<script src="js/hotspot.js"></script>
+<link rel="stylesheet" href="css/hotspot.css" type="text/css" />
+</head>
+
+<body>
+<div class="live_demo_overlay" id="demo_overlay">
+</div>
+	<noscript>
+	<div class="live_demo_container" id="step_0" style="display:block !important;">
+		<h1 class="demo-title">Start the Demo.</h1>    
+		<div class="demo-description">Please click on the button below to start the demo.</div>    
+		<div class="demo-buttons"><a class="demo-button" href="">Start</a></div>  
+	</div> 
+	</noscript>
+	<div class="live_demo_container" id="step_1">
+		<h1 class="demo-title">Welcome to TheRedtown demo.</h1>    
+		<div class="demo-description">This demo will give you a quick overview of how TheRedtown works and how you can use it to throw epic ragers.</div>    
+		<div class="demo-buttons"><a class="demo-button" id="step_1_button" href="#">Let’s get started</a></div>  
+	</div> 
+	<div class="live_demo_container" id="step_2">
+		<h1 class="demo-title">Meet your party dashboard.</h1>    
+		<div class="demo-description">TheRedtown party dashboard allows your guests to vote on party details like drinks, themes, and songs.</div>    
+		<div class="demo-buttons"><a class="demo-button" id="step_2_button" href="#">try it out</a></div>  
+	</div>
+	<div class="live_demo_container" id="step_2a">
+		<h1 class="demo-title">Keep track of votes</h1>    
+		<div class="demo-description">TheRedtown party dashboard keeps track of the vote and veto totals so you know what to buy for your party.</div>    
+		<div class="demo-buttons"><a class="demo-button" id="step_2a_button" href="#">continue</a></div>  
+	</div>
+	<div class="live_demo_container" id="step_3">
+		<h1 class="demo-title">There's more...</h1>    
+		<div class="demo-description">TheRedtown party dashboard also allows your guests to hook your party up with party supplies, like pong tables, beer, and cups.</div>    
+		<div class="demo-buttons"><a class="demo-button" id="step_3_button" href="#">let's check it out</a></div>  
+	</div>
+	<div class="live_demo_container" id="step_4">
+		<h1 class="demo-title">Say hello to your newly earned favors</h1>    
+		<div class="demo-description">Every time you or your guests contribute, you earn points called favors which you can redeem for perks, like ice luges, foam machines, and confetti canons.</div>    
+		<div class="demo-buttons"><a class="demo-button" id="step_4_button">redeem my favors for perks</a></div>   
+	</div>
+	<div class="live_demo_container" id="step_5">
+		<h1 class="demo-title">Pooling Favors</h1>    
+		<div class="demo-description">You don't have enough favors to fund this perk, but your friends can pitch in to help you out.</div>    
+		<div class="demo-buttons"><a class="demo-button step_5_button">get friends to pitch in</a></div>  
+	</div>
+	<div class="live_demo_container" id="step_6">
+		<h1 class="demo-title">Perk successfully funded</h1>    
+		<div class="demo-description">Once you and your guests successfully fund a perk, we'll send it to your party for free.</div>    
+		<div class="demo-buttons"><a class="demo-button" href="song_dashboard.html">Continue</a></div>  
+	</div>
+	<div class="live_demo_container" id="step_7">
+		<h1 class="demo-title">Live demo complete</h1>    
+		<div class="demo-description">Thank you for taking the time to check out our demo. We look forward to having you use TheRedtown for your next party.</div>    
+		<div class="demo-buttons"><a class="demo-button" href="http://theredtown.com">Exit</a></div>  
+	</div>
+	<div class="live_demo_container">
+		<h1 class="demo-title">The Entourage.</h1>    
+		<div class="demo-description">TheRedtown allows your guests to create entourages so they can setup carpools and figure out pre-party details.</div>    
+		<div class="demo-buttons"><a class="demo-button">let's check it out</a></div>  
+	</div>
+	<div class="live_demo_container">
+		<h1 class="demo-title">Meet the party playlist.</h1>    
+		<div class="demo-description">The party playlist section lets you and your guests collaborate in putting together the best playlist for your party.</div>    
+		<div class="demo-buttons"><a class="demo-button">let's check it out</a></div>  
+	</div>
+	<div class="live_demo_container">
+		<h1 class="demo-title">Facebook friendly.</h1>    
+		<div class="demo-description">No need to create a new account or add your friends all over again. You can use your existing Facebook account to login and invite your friends to your party.</div>    
+		<div class="demo-buttons"><a class="demo-button">try it for free today</a></div>  
+	</div>
+	<div class="live_demo_container" id="trial">
+		<h1 class="demo-title"><span class="supply_name">awd</span> Hook-up</h1>        
+		<div class="demo-description">Who's bringing the <span class="supply_name">awd</span> to the party?</div>    
+		<div class="demo-buttons"><a class="demo-button" id="i_bring">I will bring it!</a><br/><a class="demo-button" style="margin-top:16px;" id="my_friend_bring">my friend will bring it!</a> </div>  
+		<input type="hidden" id="drink_hookup"></input>
+	</div>
+	<div class="live_demo_container" id="trial2">
+		<h1 class="demo-title"><span class="supply_name">awd</span> Hook-up</h1>        
+		<div class="demo-description">Which of your friends will bring the <span class="supply_name">awd</span>?</div>    
+		<div class="demo-buttons">
+			<a href="#" style="margin-right:10px;" onclick="javascript: friend_hookup('Jess'); return false;"><img src="images/profile_photo1.gif" alt="" /></a>
+			<a href="#" style="margin-right:10px;" onclick="javascript: friend_hookup('Max'); return false;"><img src="images/profile_photo2.gif" alt="" /></a>
+			<a href="#" style="margin-right:10px;" onclick="javascript: friend_hookup('Matt'); return false;"><img src="images/profile_photo3.gif" alt="" /></a>
+			<a href="#" style="margin-right:10px;" onclick="javascript: friend_hookup('Ann'); return false;"><img src="images/profile_photo4.gif" alt="" /></a>
+			<a href="#" style="margin-right:10px;" onclick="javascript: friend_hookup('Rod'); return false;"><img src="images/profile_photo5.gif" alt="" /></a>
+			<a href="#" style="margin-right:10px;" onclick="javascript: friend_hookup('Liz'); return false;"><img src="images/profile_photo6.gif" alt="" /></a>
+			<a href="#" style="margin-right:10px;" onclick="javascript: friend_hookup('Jen'); return false;"><img src="images/profile_photo7.gif" alt="" /></a>
+		</div>
+	</div>
+<!-- header -->
+<div id="header">
+	<div class="top">
+    	<div class="wrap">
+        	<a href="#" id="messages">Messages</a>
+            <a href="#" class="active">Invitations</a>
+            <a href="#">Customize</a>
+            <a href="#">Help</a>
+            <a href="#">Logout</a>
+        </div>
+    </div>
+    <div class="bottom">
+    	<div class="wrap">
+        	<div class="logo"><a href="#">TheRedtown | Keep Calm and Party On</a></div>            
+            <div class="links">
+            	<span><a href="#" class="active">Home</a></span>
+                <span><a href="#">Parties</a></span>
+                <a href="#">Perks</a>
+            </div>
+            <div class="search">
+            	<input type="text" />
+                <input type="button" value="&nbsp;" />
+            </div>
+            <div class="user-box">
+            	<div class="img"><a href="#"><img src="images/thumb-1.gif" alt="" /></a></div>
+                <div class="cont">
+                	<h3 class="clearfix">
+                    	<a href="#">Sam Smith</a>
+                    	<a href="#"><span id="total_favors">0</span> Favors</a>
+                    </h3>
+                    <div class="text clearfix">
+                    	<span>Celebrity</span>
+                        <span>Icon</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress w90per"></div></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<!-- /header -->
+
+<!-- content -->
+<div id="content">
+	<div class="view-party wrap">
+    	<!-- left panel -->
+        <div class="left-panel">
+        	<div class="header clearfix">
+            	<div class="left">
+                	<h2>Project X (Part 2)</h2>
+                    <p>The first one was just the beginning.</p>
+                </div>
+                <div class="right">
+                	<div class="fl">
+                        <a href="#">Invite more people</a><br />743 people in the guestlist
+                    </div>
+                    <div class="fl ml20">
+                        <a href="#">Catch up</a><br />on recent changes
+                    </div>
+                </div>
+            </div>
+            
+            <div class="steps" id="party_rankings">
+            	<a href="#"><span>Kickback</span></a>
+                <a href="#" class="active"><span>Hangout</span></a>
+                <a href="#"><span>Bash</span></a>
+                <a href="#"><span>Rager</span></a>
+                <a href="#"><span>neXt</span></a>
+            </div>
+			
+			<div class="project_toolbar">
+				<div class="tools">
+  					<div class="group in_project">   
+						<a href="#">
+							<span class=""><strong>Drinks</strong></span>
+						</a>
+						<a href="#" id="supplies_link">
+							<span class=""><strong>Supplies</strong></span>
+						</a>
+						<a href="#">
+							<span class=""><strong>Games</strong></span>
+						</a>
+						<a href="#">
+							<span class=""><strong>Playlist</strong></span>
+						</a>
+						<a href="#" id="perks_link">
+							<span class=""><strong>Perks</strong></span>
+						</a>
+					</div>
+				</div>
+
+			</div>
+            
+            <div class="party-boxes clearfix">
+				<div id="hotspot-59" class="hs-wrap hs-loading">
+					<img src="img/hotspot-map/transp.gif">
+					<div class="hs-spot-object" data-type="rect" data-x="0" data-y="0" data-width="650" data-height="380" data-popup-position="right" data-visible="visible" data-tooltip-width="150" data-tooltip-auto-width="false">
+						Party Dashboard
+					</div>
+					<div class="hs-spot-object" data-type="rect" data-x="635" data-y="1" data-width="5" data-height="16" data-popup-position="right" data-visible="invisible" data-tooltip-width="200" data-tooltip-auto-width="false">
+						Vote for the drinks you want at the party and veto the ones you don't. <br/> <span id="votes_remaining" style="display:inline !important;">7</span> votes remaining.
+					</div>
+					<div class="hs-spot-object" data-type="rect" data-x="635" data-y="1" data-width="5" data-height="16" data-popup-position="right" data-visible="invisible" data-tooltip-width="200" data-tooltip-auto-width="false">
+						Find something that you want to bring to the party and click Hook Up.
+					</div>
+					<div class="hs-spot-object" data-type="rect" data-x="250" data-y="-40" data-width="5" data-height="16" data-popup-position="top" data-visible="invisible" data-tooltip-width="200" data-tooltip-auto-width="false">
+						Click Perks to view available perks.
+					</div>
+					<div class="hs-spot-object" data-type="rect" data-x="635" data-y="1" data-width="5" data-height="16" data-popup-position="right" data-visible="invisible" data-tooltip-width="200" data-tooltip-auto-width="false">
+						Find the perk that you want at the party then click Pitch In.
+					</div>
+					<div class="hs-spot-object" data-type="rect" data-x="70" data-y="-40" data-width="5" data-height="16" data-popup-position="top" data-visible="invisible" data-tooltip-width="250" data-tooltip-auto-width="false">
+						Click Supplies to view available Party Supplies.
+					</div>
+					<div class="hs-spot-object" data-type="rect" data-x="875" data-y="-290" data-width="5" data-height="16" data-popup-position="bottom" data-visible="invisible" data-tooltip-width="75" data-tooltip-auto-width="false">
+						Favors earned
+					</div>
+					<div class="hs-spot-object" data-type="rect" data-x="635" data-y="1" data-width="5" data-height="16" data-popup-position="right" data-visible="invisible" data-tooltip-width="300" data-tooltip-auto-width="false">
+						Your friends just pitched in their favors for your party perk. But they're a little short. Click Pitch In until you reach the required amount of favors.
+					</div>
+				</div>
+				
+				<div id="drinks_list">
+					<div class="party-box">
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/party-thumb.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>Vodka</h4>
+								<h5>Drink</h5>
+							</div>
+							<div class="comment"><a href="#"><span>3</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="footer">
+							<a href="#" class="vote">Vote</a>
+							<a href="#" class="veto">Veto</a>
+							<a href="#" class="comments">Hook Up</a>
+						</div>
+					</div>
+					<div class="party-box">
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/whiskey.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>Whiskey</h4>
+								<h5>Party Drink</h5>
+							</div>
+							<div class="comment"><a href="#"><span>2</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="footer">
+							<a href="#" class="vote">Vote</a>
+							<a href="#" class="veto">Veto</a>
+							<a href="#" class="comments">Hook Up</a>
+						</div>
+					</div>
+					<div class="party-box">
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/jager.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>Jager</h4>
+								<h5>Party Drink</h5>
+							</div>
+							<div class="comment"><a href="#"><span>7</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="footer">
+							<a href="#" class="vote">Vote</a>
+							<a href="#" class="veto">Veto</a>
+							<a href="#" class="comments">Hook Up</a>
+						</div>
+					</div>
+					<div class="party-box">
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/rum.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>Rum</h4>
+								<h5>Party Drink</h5>
+							</div>
+							<div class="comment"><a href="#"><span>1</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="footer">
+							<a href="#" class="vote">Vote</a>
+							<a href="#" class="veto">Veto</a>
+							<a href="#" class="comments">Hook Up</a>
+						</div>
+					</div>
+					<div class="party-box">
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/beer.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>Beer</h4>
+								<h5>Party Drink</h5>
+							</div>
+							<div class="comment"><a href="#"><span>9</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="footer">
+							<a href="#" class="vote">Vote</a>
+							<a href="#" class="veto">Veto</a>
+							<a href="#" class="comments">Hook Up</a>
+						</div>
+					</div>
+					<div class="party-box">
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/tequila.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>Tequila</h4>
+								<h5>Party Drink</h5>
+							</div>
+							<div class="comment"><a href="#"><span>2</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="footer">
+							<a href="#" class="vote">Vote</a>
+							<a href="#" class="veto">Veto</a>
+							<a href="#" class="comments">Hook Up</a>
+						</div>
+					</div>
+					<div class="party-box">
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/gin.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>Gin</h4>
+								<h5>Party Drink</h5>
+							</div>
+							<div class="comment"><a href="#"><span>5</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="footer">
+							<a href="#" class="vote">Vote</a>
+							<a href="#" class="veto">Veto</a>
+							<a href="#" class="comments">Hook Up</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="clear"></div>
+				
+				<div id="supplies_list" style="display:none;">
+					<div class="party-box">
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/redcups.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>Red Cups</h4>
+								<h5>Party Supplies</h5>
+							</div>
+							<div class="comment"><a href="#"><span>1</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="footer">
+							<a href="#" class="comments">Hook Up</a>
+						</div>
+					</div>
+					<div class="party-box">
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/kegtap.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>Keg Tap</h4>
+								<h5>Party Supplies</h5>
+							</div>
+							<div class="comment"><a href="#"><span>3</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="footer">
+							<a href="#" class="comments">Hook Up</a>
+						</div>
+					</div>
+					<div class="party-box">
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/gnome.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>Gnome</h4>
+								<h5>Party Supplies</h5>
+							</div>
+							<div class="comment"><a href="#"><span>2</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="footer">
+							<a href="#" class="comments">Hook Up</a>
+						</div>
+					</div>
+					<div class="party-box">
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/pongtable.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>Pong Table</h4>
+								<h5>Party Supplies</h5>
+							</div>
+							<div class="comment"><a href="#"><span>4</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="footer">
+							<a href="#" class="comments">Hook Up</a>
+						</div>
+					</div>
+					<div class="party-box">
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/cards.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>Cards</h4>
+								<h5>Party Supplies</h5>
+							</div>
+							<div class="comment"><a href="#"><span>9</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="footer">
+							<a href="#" class="comments">Hook Up</a>
+						</div>
+					</div>
+					<div class="party-box">
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/beerbong.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>Beer Bong</h4>
+								<h5>Party Supplies</h5>
+							</div>
+							<div class="comment"><a href="#"><span>1</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="footer">
+							<a href="#" class="comments">Hook Up</a>
+						</div>
+					</div>
+					<div class="party-box">
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/speakers.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>Speakers</h4>
+								<h5>Party Supplies</h5>
+							</div>
+							<div class="comment"><a href="#"><span>3</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="footer">
+							<a href="#" class="comments">Hook Up</a>
+						</div>
+					</div>
+					<div class="party-box">
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/ice.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>Ice</h4>
+								<h5>Party Supplies</h5>
+							</div>
+							<div class="comment"><a href="#"><span>4</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="footer">
+							<a href="#" class="comments">Hook Up</a>
+						</div>
+					</div>
+					<div class="party-box">
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/hookah.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>Hookah</h4>
+								<h5>Party Supplies</h5>
+							</div>
+							<div class="comment"><a href="#"><span>5</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="footer">
+							<a href="#" class="comments">Hook Up</a>
+						</div>
+					</div>
+					<div class="party-box">
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/pongballs.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>Pong balls</h4>
+								<h5>Party Supplies</h5>
+							</div>
+							<div class="comment"><a href="#"><span>1</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="footer">
+							<a href="#" class="comments">Hook Up</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="clear"></div>
+				
+				<div id="perks_list" style="display:none;">
+					<div class="party-box">
+						<div class="hs-wrap hs-loading">
+							<img src="img/hotspot-map/transp.gif">
+							<div class="hs-spot-object" data-type="rect" data-x="175" data-y="70" data-width="5" data-height="16" data-popup-position="right" data-visible="invisible" data-tooltip-width="300" data-tooltip-auto-width="false">
+								Your friends just pitched in their favors for your party perk. But they're a little short. Click Pitch In until you reach the required amount of favors.
+							</div>
+						</div>
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/iceluge.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>Ice Luge</h4>
+								<h5>Perk</h5>
+							</div>
+							<div class="comment"><a href="#"><span>1</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="progress-bar" style="width:100% !important; margin-top:15px;"><div class="progress w90per" style="width:1% !important;"></div></div>
+						<div class="footer"> 
+							<a href="#" class="pitch_in">Pitch In</a>
+							<a>(<span class="pitched_in_total">0</span> of 1000 collected)</a>
+						</div>
+					</div>
+					<div class="party-box">
+						<div class="hs-wrap hs-loading">
+							<img src="img/hotspot-map/transp.gif">
+							<div class="hs-spot-object" data-type="rect" data-x="175" data-y="70" data-width="5" data-height="16" data-popup-position="right" data-visible="invisible" data-tooltip-width="300" data-tooltip-auto-width="false">
+								Your friends just pitched in their favors for your party perk. But they're a little short. Click Pitch In until you reach the required amount of favors.
+							</div>
+						</div>
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/beerbong.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>Beer Bong</h4>
+								<h5>Perk</h5>
+							</div>
+							<div class="comment"><a href="#"><span>6</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="progress-bar" style="width:100% !important; margin-top:15px;"><div class="progress w90per" style="width:1% !important;"></div></div>
+						<div class="footer">
+							<a href="#" class="pitch_in">Pitch In</a>
+							<a>(<span class="pitched_in_total">0</span> of 1000 collected)</a>
+						</div>
+					</div>
+					<div class="party-box">
+						<div class="hs-wrap hs-loading">
+							<img src="img/hotspot-map/transp.gif">
+							<div class="hs-spot-object" data-type="rect" data-x="175" data-y="70" data-width="5" data-height="16" data-popup-position="right" data-visible="invisible" data-tooltip-width="300" data-tooltip-auto-width="false">
+								Your friends just pitched in their favors for your party perk. But they're a little short. Click Pitch In until you reach the required amount of favors.
+							</div>
+						</div>
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/foam_machine.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>Foam Machine</h4>
+								<h5>Perk</h5>
+							</div>
+							<div class="comment"><a href="#"><span>3</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="progress-bar" style="width:100% !important; margin-top:15px;"><div class="progress w90per" style="width:1% !important;"></div></div>
+						<div class="footer">
+							<a href="#" class="pitch_in">Pitch In</a>
+							<a>(<span class="pitched_in_total">0</span> of 1000 collected)</a>
+						</div>
+					</div>
+					<div class="party-box">
+						<div class="hs-wrap hs-loading">
+							<img src="img/hotspot-map/transp.gif">
+							<div class="hs-spot-object" data-type="rect" data-x="175" data-y="70" data-width="5" data-height="16" data-popup-position="right" data-visible="invisible" data-tooltip-width="300" data-tooltip-auto-width="false">
+								Your friends just pitched in their favors for your party perk. But they're a little short. Click Pitch In until you reach the required amount of favors.
+							</div>
+						</div>
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/confetticanon.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>Confetti Canon</h4>
+								<h5>Perk</h5>
+							</div>
+							<div class="comment"><a href="#"><span>9</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="progress-bar" style="width:100% !important; margin-top:15px;"><div class="progress w90per" style="width:1% !important;"></div></div>
+						<div class="footer">
+							<a href="#" class="pitch_in">Pitch In</a>
+							<a>(<span class="pitched_in_total">0</span> of 1000 collected)</a>
+						</div>
+					</div>
+					<div class="party-box">
+						<div class="hs-wrap hs-loading">
+							<img src="img/hotspot-map/transp.gif">
+							<div class="hs-spot-object" data-type="rect" data-x="175" data-y="70" data-width="5" data-height="16" data-popup-position="right" data-visible="invisible" data-tooltip-width="300" data-tooltip-auto-width="false">
+								Your friends just pitched in their favors for your party perk. But they're a little short. Click Pitch In until you reach the required amount of favors.
+							</div>
+						</div>
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/lights.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>LED Lights</h4>
+								<h5>Perk</h5>
+							</div>
+							<div class="comment"><a href="#"><span>2</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="progress-bar" style="width:100% !important; margin-top:15px;"><div class="progress w90per" style="width:1% !important;"></div></div>
+						<div class="footer">
+							<a href="#" class="pitch_in">Pitch In</a>
+							<a>(<span class="pitched_in_total">0</span> of 1000 collected)</a>
+						</div>
+					</div>
+					<div class="party-box">
+						<div class="hs-wrap hs-loading">
+							<img src="img/hotspot-map/transp.gif">
+							<div class="hs-spot-object" data-type="rect" data-x="175" data-y="70" data-width="5" data-height="16" data-popup-position="right" data-visible="invisible" data-tooltip-width="300" data-tooltip-auto-width="false">
+								Your friends just pitched in their favors for your party perk. But they're a little short. Click Pitch In until you reach the required amount of favors.
+							</div>
+						</div>
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/pongtable.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>Pong Table</h4>
+								<h5>Perk</h5>
+							</div>
+							<div class="comment"><a href="#"><span>10</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="progress-bar" style="width:100% !important; margin-top:15px;"><div class="progress w90per" style="width:1% !important;"></div></div>
+						<div class="footer">
+							<a href="#" class="pitch_in">Pitch In</a>
+							<a>(<span class="pitched_in_total">0</span> of 1000 collected)</a>
+						</div>
+					</div>
+					<div class="party-box">
+						<div class="hs-wrap hs-loading">
+							<img src="img/hotspot-map/transp.gif">
+							<div class="hs-spot-object" data-type="rect" data-x="175" data-y="70" data-width="5" data-height="16" data-popup-position="right" data-visible="invisible" data-tooltip-width="300" data-tooltip-auto-width="false">
+								Your friends just pitched in their favors for your party perk. But they're a little short. Click Pitch In until you reach the required amount of favors.
+							</div>
+						</div>
+						<div class="header clearfix">
+							<div class="img"><a href="#"><img src="images/moonbounce.gif" alt="" /></a></div>
+							<div class="cont">
+								<h4>Moonbounce</h4>
+								<h5>Perk</h5>
+							</div>
+							<div class="comment"><a href="#"><span>4</span></a></div>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<div class="progress-bar" style="width:100% !important; margin-top:15px;"><div class="progress w90per" style="width:1% !important;"></div></div>
+						<div class="footer">
+							<a href="#" class="pitch_in">Pitch In</a>
+							<a>(<span class="pitched_in_total">0</span> of 1000 collected)</a>
+						</div>
+					</div>
+				
+				</div>
+				
+			</div>
+		   
+			<div class="discussions">
+            	<h3 class="clearfix"><span>Discussions</span> <a href="#" class="button">Post a new message</a></h3>
+                <ul>
+                	<li class="clearfix">
+                    	<div class="thumb"><img src="images/profile_photo1.gif" alt="" /></div>
+                        <div class="cont">
+                            <h4>Re: Party location</h4>
+                            <p>Hey, let's throw this party in my house in Malibu.</p>
+                        </div>
+                        <div class="time-stamp">10 min ago</div>
+                        <div class="count"><span>3</span></div>
+                    </li>
+                    <li class="clearfix">
+                    	<div class="thumb"><img src="images/profile_photo2.gif" alt="" /></div>
+                        <div class="cont">
+                            <h4>Guest List</h4>
+                            <p>Cory, can I bring my friends from New York to the party?.</p>
+                        </div>
+                        <div class="time-stamp">3 hours ago</div>
+                        <div class="count"><span>5</span></div>
+                    </li>
+                    <li class="clearfix">
+                    	<div class="thumb"><img src="images/profile_photo3.gif" alt="" /></div>
+                        <div class="cont">
+                            <h4>Bringing party favors.</h4>
+                            <p>I'm taking care of the party favors lol. You don't have to worry about it.</p>
+                        </div>
+                        <div class="time-stamp">Yesterday</div>
+                    </li>
+                    <li class="clearfix">
+                    	<div class="thumb"><img src="images/profile_photo4.gif" alt="" /></div>
+                        <div class="cont">
+                            <h4>Carpools.</h4>
+                            <p>I can fit a couple more in my car. We're meeting in my apartment at 10.</p>
+                        </div>
+                        <div class="time-stamp">2 days ago</div>
+                        <div class="count"><span>9</span></div>
+                    </li>
+                </ul>
+                <p class="more"><a href="#">3 more discussions</a></p>
+            </div>
+      
+            
+            
+	   </div>
+        <!-- /left panel -->
+        
+        <!-- right panel -->
+        <div class="right-panel">
+        	<h3>My Checklist</h3>
+            <ul>
+            	<li><a href="#">Solo, No Go!</a></li>
+                <li><a href="#">Where's the Pre-Party at?</a></li>
+                <li><a href="#">Party Favor Hookup</a></li>
+                <li><a href="#">My Party Crew</a></li>
+                <li><a href="#">Drop Beats, Not Bombs</a></li>
+                <li><a href="#">Boss Life</a></li>
+                <li><a href="#">iVoted</a></li>
+            </ul>
+            
+            <h3>My Entourage</h3>
+            <ul class="entourage">
+            	<li><a href="javascript:void(0);">Entourage 1</a>
+                	<div class="entourage-box">
+                    	<h4>Members</h4>
+                        <div class="thumbs clearfix">
+                        	<a href="#"><img src="images/thumb-1.gif" alt="" /></a>
+                            <a href="#"><img src="images/thumb-1.gif" alt="" /></a>
+                            <a href="#"><img src="images/thumb-1.gif" alt="" /></a>
+                            <a href="#"><img src="images/thumb-1.gif" alt="" /></a>
+                            <a href="#"><img src="images/thumb-1.gif" alt="" /></a>
+                            <a href="#"><img src="images/thumb-1.gif" alt="" /></a>
+                        </div>
+                        <h4>Pre-game Time</h4>
+                        <div class="cont">
+                        	6:00  <span class="separator">|</span> <span class="vote">6</span> <span class="veto">3</span> <br />
+                            6:30  <span class="separator">|</span> <span class="vote">Vote</span> <span class="veto">Veto</span> <br />
+                            7:00  <span class="separator">|</span> <br />
+                            7:30  <span class="separator">|</span> <br />
+                            8:00  <span class="separator">|</span> <br />
+                            8:30  <span class="separator">|</span> <br />
+                            9:00  <span class="separator">|</span> <br />
+                            9:30  <span class="separator">|</span>
+                        </div>
+                        
+                        <h4>Pre-game Location</h4>
+                        <div class="cont">
+                        	<span class="text">Alessandara Ambrosio's place</span> <span class="vote">Vote</span> <span class="veto">Veto</span> <br />
+                            <span class="text">McDonalds</span> <span class="vote">7</span> <span class="veto">2</span> <br />
+                            <span class="text">Rosie Huntington's Apt</span> <span class="vote">Vote</span> <span class="veto">Veto</span>
+                        </div>
+                        
+                        <h4>Comments</h4>
+                        <div class="cont">
+                        	<a href="#">Alesandra: Lets meet at 5 instead of 9. Please please please</a><br />
+                            <a href="#">Myro: Can't. Rosie is getting here at 7 still.</a>
+                            
+                            <textarea rows="2" cols="10" onfocus="if(this.value == this.defaultValue) this.value = ''" onblur="if(this.value == '') this.value = this.defaultValue">Write a new comment......
+press Enter to post</textarea>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="javascript:void(0);">Entourage 2</a>
+                	<div class="entourage-box">
+                    	<h4>Members</h4>
+                        <div class="thumbs clearfix">
+                        	<a href="#"><img src="images/thumb-1.gif" alt="" /></a>
+                            <a href="#"><img src="images/thumb-1.gif" alt="" /></a>
+                            <a href="#"><img src="images/thumb-1.gif" alt="" /></a>
+                            <a href="#"><img src="images/thumb-1.gif" alt="" /></a>
+                            <a href="#"><img src="images/thumb-1.gif" alt="" /></a>
+                            <a href="#"><img src="images/thumb-1.gif" alt="" /></a>
+                        </div>
+                        <h4>Pre-game Time</h4>
+                        <div class="cont">
+                        	6:00  <span class="separator">|</span> <span class="vote">6</span> <span class="veto">3</span> <br />
+                            6:30  <span class="separator">|</span> <span class="vote">Vote</span> <span class="veto">Veto</span> <br />
+                            7:00  <span class="separator">|</span> <br />
+                            7:30  <span class="separator">|</span> <br />
+                            8:00  <span class="separator">|</span> <br />
+                            8:30  <span class="separator">|</span> <br />
+                            9:00  <span class="separator">|</span> <br />
+                            9:30  <span class="separator">|</span>
+                        </div>
+                        
+                        <h4>Pre-game Location</h4>
+                        <div class="cont">
+                        	<span class="text">Alessandara Ambrosio's place</span> <span class="vote">Vote</span> <span class="veto">Veto</span> <br />
+                            <span class="text">McDonalds</span> <span class="vote">7</span> <span class="veto">2</span> <br />
+                            <span class="text">Rosie Huntington's Apt</span> <span class="vote">Vote</span> <span class="veto">Veto</span>
+                        </div>
+                        
+                        <h4>Comments</h4>
+                        <div class="cont">
+                        	<a href="#">Alesandra: Lets meet at 5 instead of 9. Please please please</a><br />
+                            <a href="#">Myro: Can't. Rosie is getting here at 7 still.</a>
+                            
+                            <textarea rows="2" cols="10" onfocus="if(this.value == this.defaultValue) this.value = ''" onblur="if(this.value == '') this.value = this.defaultValue">Write a new comment......
+press Enter to post</textarea>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="javascript:void(0);">Entourage 3</a>
+                	<div class="entourage-box">
+                    	<h4>Members</h4>
+                        <div class="thumbs clearfix">
+                        	<a href="#"><img src="images/thumb-1.gif" alt="" /></a>
+                            <a href="#"><img src="images/thumb-1.gif" alt="" /></a>
+                            <a href="#"><img src="images/thumb-1.gif" alt="" /></a>
+                            <a href="#"><img src="images/thumb-1.gif" alt="" /></a>
+                            <a href="#"><img src="images/thumb-1.gif" alt="" /></a>
+                            <a href="#"><img src="images/thumb-1.gif" alt="" /></a>
+                        </div>
+                        <h4>Pre-game Time</h4>
+                        <div class="cont">
+                        	6:00  <span class="separator">|</span> <span class="vote">6</span> <span class="veto">3</span> <br />
+                            6:30  <span class="separator">|</span> <span class="vote">Vote</span> <span class="veto">Veto</span> <br />
+                            7:00  <span class="separator">|</span> <br />
+                            7:30  <span class="separator">|</span> <br />
+                            8:00  <span class="separator">|</span> <br />
+                            8:30  <span class="separator">|</span> <br />
+                            9:00  <span class="separator">|</span> <br />
+                            9:30  <span class="separator">|</span>
+                        </div>
+                        
+                        <h4>Pre-game Location</h4>
+                        <div class="cont">
+                        	<span class="text">Alessandara Ambrosio's place</span> <span class="vote">Vote</span> <span class="veto">Veto</span> <br />
+                            <span class="text">McDonalds</span> <span class="vote">7</span> <span class="veto">2</span> <br />
+                            <span class="text">Rosie Huntington's Apt</span> <span class="vote">Vote</span> <span class="veto">Veto</span>
+                        </div>
+                        
+                        <h4>Comments</h4>
+                        <div class="cont">
+                        	<a href="#">Alesandra: Lets meet at 5 instead of 9. Please please please</a><br />
+                            <a href="#">Myro: Can't. Rosie is getting here at 7 still.</a>
+                            
+                            <textarea rows="2" cols="10" onfocus="if(this.value == this.defaultValue) this.value = ''" onblur="if(this.value == '') this.value = this.defaultValue">Write a new comment......
+press Enter to post</textarea>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#">New Entourage</a></li>
+            </ul>
+            
+            <h3>My Contributions</h3>
+            <ul>
+            	<li><a href="#">Votes</a></li>
+                <li><a href="#">Vetoes</a></li>
+                <li><a href="#">Hook-Up</a></li>
+                <li><a href="#">Pitch In</a></li>
+                <li><a href="#">Invites</a></li>
+            </ul>
+        </div>
+        <!-- /right panel -->
+        
+        <div class="clear"></div>
+    </div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div id="footer">
+	<div class="wrap">
+    	<div class="logo"><a href="#">Redtown Network LLC</a></div>
+        <div class="company">
+        	<p>TheRedtown is designed and built<br />
+            in Los Angeles, California<br />
+            by party animals for party animals.</p>
+            <p>&copy; 2013 Redtown Network LLC Patent Pending</p>
+        </div>
+        <div class="links">
+        	<div>
+                <a href="#">Home</a> <span>.</span>
+                <a href="#">Terms</a> <span>.</span>
+                <a href="#">Privacy</a> <span>.</span>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="twitter-widget">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-url="https://dev.twitter.com" data-via="@twitter" data-lang="en">Tweet</a>
+
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.rangpursoft.com&send=false&layout=button_count&width=450&show_faces=true&font&colorscheme=light&action=like&height=21&appId=128100414041629" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:82px; height:28px;" allowTransparency="true"></iframe>
+        <div class="clear"></div>
+    </div>
+</div>
+<!-- /footer -->
+
+<script>
+var hookup;
+var votes_remaining = 7;
+var first_pitch_in = true;
+	$(document).ready(function() {
+		$("#hotspot-59").hotspot({ "show_on" : "always" });
+		$('.hs-rect').hide();
+		$('#step_1').show();
+		$('.comments').hide();
+		$('.vote, .veto').click(function(event){
+			event.preventDefault();
+			$(this).addClass("voted");
+			$(this).parent().children('.vote').html(Math.floor(Math.random()*51)+1);
+			$(this).parent().children('.veto').html(Math.floor(Math.random()*11)+1);
+			$(this).parent().children('.vote, .veto').off();
+			votes_remaining = votes_remaining - 1;
+			$('#votes_remaining').html(votes_remaining);
+			if(votes_remaining == 0){
+				$('.hs-rect:eq(1)').hide();
+				$('#demo_overlay').show();
+				$('#step_3').show();
+			}
+			
+		});
+		$('#step_1_button').click(function(){ //Welcome to TheRedtown demo
+			$('#step_1').hide();
+			$('#step_2').show();
+			$('.hs-rect:first').show();
+		});
+		$('#step_2_button').click(function(){ //Meet your Party Dashboard
+			$('#demo_overlay').hide();
+			$('#step_2').hide();
+			$('.hs-rect:first').hide();
+			$('.hs-rect:eq(1)').show();
+		});
+		$('#step_3_button').click(function(){
+			$('#demo_overlay').hide();
+			$('#step_3').hide();
+			$('.hs-rect:eq(5)').show();
+			/*$('.comments').show();
+			$('.comments').click(function(event){
+				event.preventDefault();
+				$('#demo_overlay').show();
+				$('#trial').show();
+				$('.hs-rect:eq(2)').hide();
+				hookup = $(this);
+			});	*/
+			$('#supplies_link').click(function(event){
+				event.preventDefault();
+				$('#drinks_list').hide();
+				$('#supplies_list').show();
+				$('.comments').show();
+				$('.hs-rect:eq(2)').show();
+				$('.hs-rect:eq(5)').hide();
+			});
+			$('.comments').click(function(event){
+				event.preventDefault();
+				$('#demo_overlay').show();
+				$('.supply_name').html($(this).parents('.footer:first').siblings('.header:first').children('.cont:first').children('h4:first').html());
+				$('#trial').show();
+				$('.hs-rect:eq(2)').hide();
+				hookup = $(this);
+			});
+		});
+		$('#i_bring').click(function(){
+			$(hookup).html('I\'m bringing!');
+			$('#demo_overlay').hide();
+			$('#trial').hide();
+			step4();
+		});
+		$('#my_friend_bring').click(function(){
+			$('#trial').hide();
+			$('#trial2').show();
+		});
+		$('#step_4_button').click(function(){
+			$('#demo_overlay').hide();
+			$('#step_4').hide();
+			$('.hs-rect:eq(6)').hide();
+			$('.hs-rect:eq(3)').show();
+			$('#perks_link').click(function(event){
+				event.preventDefault();
+				$('#supplies_list').hide();
+				$('#perks_list').show();
+				$('.hs-rect:eq(3)').hide();
+				$('.hs-rect:eq(4)').show();
+			});	
+		});
+		
+		$('.pitch_in').click(function(event){
+			event.preventDefault();
+			var total_favors = $('#total_favors').html();
+			total_favors = total_favors*1;
+			$('#total_favors').html(total_favors-50);
+			$('.hs-rect:eq(4)').hide();
+			var link = $(this);
+			var total = $(link).siblings('a:first').children('span:first').html();
+			total = total*1;
+			total = total+50;
+			$(link).siblings('a:first').children('span:first').html(total);
+			$(link).parent().siblings('.progress-bar:first').children('.progress:first').css('width',total/10+'%');
+			if(total>=1000) //show the congratulations... how to  //if fully funded do the following
+			{
+				$(link).html('Funded');
+				$(link).off();
+				$('#demo_overlay').show();
+				$('#step_6').show();
+			}
+			else if(total<=800) {//else if first time //simulate friends pitching in
+				$('#demo_overlay').show();
+				$('#step_5').show();
+			}
+			
+			$('.step_5_button').click(function(event){
+				event.preventDefault();
+				$('.hs-tooltip-wrap').hide();
+				$(link).parent().siblings('.hs-wrap:first').hotspot({ "show_on" : "always" });
+				$('#step_5').hide();
+				$('#demo_overlay').hide();
+				$(link).siblings('a:first').children('span:first').html('850');
+				$(link).parent().siblings('.progress-bar:first').children('.progress:first').css('width','85%');
+			});
+			
+			$('#step_6_button').click(function(event){
+				event.preventDefault();
+				$('#step_6').hide();
+				$('#step_7').show();
+			});
+			
+		});
+		
+
+	});
+	
+	function friend_hookup(friend_name){
+		$(hookup).html('Invited '+friend_name);
+		$('#demo_overlay').hide();
+		$('#trial2').hide();
+		step4();
+	}
+	function step2(){
+		alert('awd');
+	}
+	
+	function step4(){
+		$('#demo_overlay').show();
+		$('#step_4').show();
+		window.scroll(0,0);
+		$('#total_favors').html('1000');
+		$('.hs-rect:eq(6)').show();
+	}
+</script>
+
+
+</html>
